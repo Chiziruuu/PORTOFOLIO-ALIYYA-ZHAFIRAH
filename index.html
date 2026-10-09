@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliyya Zhafirah | Engineering Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        maritime: '#27293d',
+                        blueglow: '#b2d4dd',
+                        coconut: '#f0ede5',
+                        darker: '#1b1d2a'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #27293d;
+            color: #f0ede5;
+        }
+        /* Custom scrollbar for modal */
+        #project-modal > div::-webkit-scrollbar {
+            width: 6px;
+        }
+        #project-modal > div::-webkit-scrollbar-thumb {
+            background-color: #1b1d2a;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-maritime text-coconut antialiased selection:bg-blueglow selection:text-maritime">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-maritime/90 backdrop-blur-md border-b border-blueglow/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo & Name Branding -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="px-3 py-1.5 rounded-xl bg-blueglow text-maritime font-bold flex items-center justify-center text-xs tracking-wider uppercase shadow-md group-hover:scale-105 transition-transform">
+                    Portofolio
+                </div>
+                <span class="text-base sm:text-lg font-bold tracking-wider text-coconut">Aliyya Zhafirah</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-sm font-medium text-blueglow transition-colors hover:text-blueglow">Home</a>
+                <a href="#projects" class="nav-link text-sm font-medium text-coconut/80 hover:text-blueglow transition-colors">Projects</a>
+                <a href="#contact" class="nav-link text-sm font-medium text-coconut/80 hover:text-blueglow transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-coconut focus:outline-none text-xl p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-darker border-b border-blueglow/10 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#home" class="mobile-link block text-base font-medium text-blueglow">Home</a>
+            <a href="#projects" class="mobile-link block text-base font-medium text-coconut/80">Projects</a>
+            <a href="#contact" class="mobile-link block text-base font-medium text-coconut/80">Contact</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main>
+
+        <!-- SECTION: HOME -->
+        <section id="home" class="min-h-screen flex items-center pt-24 pb-16 px-6">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Introduction Text -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blueglow/10 border border-blueglow/30 text-blueglow text-xs font-semibold tracking-wide uppercase">
+                        <i class="fa-solid fa-microchip text-xs"></i> Electronics Engineering Technology Student
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-coconut leading-tight">
+                        Hello, I'm <br><span class="text-blueglow">Aliyya Zhafirah</span>
+                    </h1>
+
+                    <p class="text-lg font-medium text-blueglow/90">
+                        Electronics Engineering Technology Student | Embedded Systems | IoT | Automation
+                    </p>
+
+                    <p class="text-coconut/70 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Mahasiswa Teknologi Rekayasa Sistem Elektronika di Politeknik Caltex Riau yang berfokus pada perancangan sistem elektronika, pemrograman mikrokontroler, IoT, instrumentasi, dan otomasi industri.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#projects" class="px-6 py-3 rounded-xl bg-blueglow text-maritime font-semibold text-sm hover:bg-coconut transition-all shadow-lg shadow-blueglow/10 flex items-center gap-2">
+                            Explore My Projects <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#contact" class="px-6 py-3 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-sm hover:bg-blueglow/10 transition-all">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Profile Photo / Visual Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:w-80 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-blueglow/20 bg-darker shadow-2xl group">
+                        <!-- Profile Image -->
+                        <img src="assets/images/profile.jpg" alt="Aliyya Zhafirah" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-maritime via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 bg-maritime/90 backdrop-blur-md p-3 rounded-xl border border-blueglow/20">
+                            <p class="text-xs font-bold text-blueglow">Politeknik Caltex Riau</p>
+                            <p class="text-xs text-coconut/80">Teknologi Rekayasa Sistem Elektronika</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: PROJECTS -->
+        <section id="projects" class="py-24 px-6 bg-darker/50 border-t border-blueglow/10">
+            <div class="max-w-7xl mx-auto space-y-12">
+                
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-coconut">Featured Projects</h2>
+                        <p class="text-coconut/70 text-sm sm:text-base mt-2 max-w-xl">
+                            Kumpulan proyek di bidang sistem embedded, IoT, instrumen elektronika, dan otomasi industri yang pernah dikerjakan.
+                        </p>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div id="filter-container" class="flex flex-wrap gap-2">
+                        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-blueglow text-maritime transition-all" data-filter="all">All Projects</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-maritime border border-blueglow/20 text-coconut/80 hover:text-blueglow transition-all" data-filter="IoT">IoT</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-maritime border border-blueglow/20 text-coconut/80 hover:text-blueglow transition-all" data-filter="Robotics">Robotics</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-maritime border border-blueglow/20 text-coconut/80 hover:text-blueglow transition-all" data-filter="Embedded">Embedded Systems</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-maritime border border-blueglow/20 text-coconut/80 hover:text-blueglow transition-all" data-filter="Electronics">Electronics</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-maritime border border-blueglow/20 text-coconut/80 hover:text-blueglow transition-all" data-filter="Control">Control Systems</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid (IoT Monitoring Deleted) -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- 1. Automatic Plant Watering System (Coming Soon) -->
+                    <div class="project-card rounded-2xl bg-maritime border border-blueglow/10 overflow-hidden hover:border-blueglow/40 transition-all flex flex-col justify-between group opacity-90" data-category="IoT">
+                        <div>
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="assets/projects/watering-system.jpg" alt="Automatic Plant Watering System" onerror="this.src='https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-md bg-amber-500/90 backdrop-blur-md text-[10px] font-bold text-maritime shadow">Coming Soon</span>
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-md bg-maritime/80 backdrop-blur-md text-[10px] font-bold text-blueglow border border-blueglow/20">IoT</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <h3 class="text-xl font-bold text-coconut group-hover:text-blueglow transition-colors">Automatic Plant Watering System</h3>
+                                <p class="text-coconut/70 text-sm line-clamp-2">Sistem penyiram tanaman otomatis berbasis ESP32, sensor kelembaban tanah, RTC, pompa air, dan integrasi informasi cuaca. (Dalam pengembangan)</p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">ESP32</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Soil Sensor</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Soon</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('watering')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                                View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Autonomous Tri OmniWheel Transporter Robot -->
+                    <div class="project-card rounded-2xl bg-maritime border border-blueglow/10 overflow-hidden hover:border-blueglow/40 transition-all flex flex-col justify-between group" data-category="Robotics">
+                        <div>
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="assets/projects/omniwheel-robot.jpg" alt="Autonomous Tri OmniWheel Transporter Robot" onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-md bg-maritime/80 backdrop-blur-md text-[10px] font-bold text-blueglow border border-blueglow/20">Robotics</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <h3 class="text-xl font-bold text-coconut group-hover:text-blueglow transition-colors">Autonomous Tri OmniWheel Transporter Robot</h3>
+                                <p class="text-coconut/70 text-sm line-clamp-2">Robot transpor otonom berbasis Raspberry Pi dengan sistem computer vision untuk deteksi objek, integrasi perangkat keras, dan pembacaan barcode.</p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Raspberry Pi</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Computer Vision</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">OmniWheel</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('omnirobot')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                                View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 3. Digital Door Lock -->
+                    <div class="project-card rounded-2xl bg-maritime border border-blueglow/10 overflow-hidden hover:border-blueglow/40 transition-all flex flex-col justify-between group" data-category="Embedded">
+                        <div>
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="assets/projects/digital-door-lock.jpg" alt="Digital Door Lock" onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-md bg-maritime/80 backdrop-blur-md text-[10px] font-bold text-blueglow border border-blueglow/20">Embedded</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <h3 class="text-xl font-bold text-coconut group-hover:text-blueglow transition-colors">Digital Door Lock</h3>
+                                <p class="text-coconut/70 text-sm line-clamp-2">Sistem pengaman pintu digital menggunakan keypad matriks, layar LCD, mikrokontroler, modul relay, dan solenoid lock.</p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Keypad</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">LCD</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Relay</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('doorlock')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                                View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 4. MQ-2 Gas Monitoring System -->
+                    <div class="project-card rounded-2xl bg-maritime border border-blueglow/10 overflow-hidden hover:border-blueglow/40 transition-all flex flex-col justify-between group" data-category="Electronics">
+                        <div>
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="assets/projects/gas-monitoring.jpg" alt="MQ-2 Gas Monitoring System" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-md bg-maritime/80 backdrop-blur-md text-[10px] font-bold text-blueglow border border-blueglow/20">Electronics</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <h3 class="text-xl font-bold text-coconut group-hover:text-blueglow transition-colors">MQ-2 Gas Monitoring System</h3>
+                                <p class="text-coconut/70 text-sm line-clamp-2">Alat deteksi dan pemantauan kadar gas berbahaya menggunakan sensor MQ-2 dan ESP32 untuk pembacaan konsentrasi gas akurat.</p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">ESP32</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">MQ-2 Sensor</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">PPM Meter</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('gasmonitoring')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                                View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 5. Line Follower Robot -->
+                    <div class="project-card rounded-2xl bg-maritime border border-blueglow/10 overflow-hidden hover:border-blueglow/40 transition-all flex flex-col justify-between group" data-category="Electronics">
+                        <div>
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="assets/projects/line-follower.jpg" alt="Line Follower Robot" onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-md bg-maritime/80 backdrop-blur-md text-[10px] font-bold text-blueglow border border-blueglow/20">Electronics</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <h3 class="text-xl font-bold text-coconut group-hover:text-blueglow transition-colors">Line Follower Robot</h3>
+                                <p class="text-coconut/70 text-sm line-clamp-2">Robot otonom pengikut garis menggunakan rangkaian elektronika analog/digital, sensor optik, dan kontrol motor DC.</p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Motor Driver</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Optical Sensors</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Chassis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('linefollower')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                                View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 6. Aero Pendulum -->
+                    <div class="project-card rounded-2xl bg-maritime border border-blueglow/10 overflow-hidden hover:border-blueglow/40 transition-all flex flex-col justify-between group" data-category="Control">
+                        <div>
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="assets/projects/aero-pendulum.jpg" alt="Aero Pendulum" onerror="this.src='https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-md bg-maritime/80 backdrop-blur-md text-[10px] font-bold text-blueglow border border-blueglow/20">Control</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <h3 class="text-xl font-bold text-coconut group-hover:text-blueglow transition-colors">Aero Pendulum</h3>
+                                <p class="text-coconut/70 text-sm line-clamp-2">Sistem kendali pendulum aerodinamis menggunakan Arduino Uno, sensor posisi potensiometer, aktuator motor, dan MATLAB/Simulink PID tuning.</p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">Arduino</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">MATLAB/Simulink</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-blueglow/10 text-blueglow text-[11px] font-medium">PID Controller</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('aeropendulum')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                                View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: CONTACT -->
+        <section id="contact" class="py-24 px-6 border-t border-blueglow/10">
+            <div class="max-w-4xl mx-auto space-y-12">
+                
+                <div class="text-center space-y-4">
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-coconut">Let's Connect</h2>
+                    <p class="text-coconut/70 text-base max-w-lg mx-auto">
+                        Tertarik untuk berdiskusi mengenai proyek elektronika, kolaborasi sistem embedded, kesempatan magang, atau bidang teknologi lainnya? Silakan hubungi saya melalui kanal di bawah ini.
+                    </p>
+                </div>
+
+                <!-- Contact Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    
+                    <!-- Email Card -->
+                    <a href="mailto:aliyyazhafirah262@gmail.com" class="p-6 rounded-2xl bg-darker border border-blueglow/10 hover:border-blueglow/40 transition-all text-center space-y-3 group">
+                        <div class="w-12 h-12 mx-auto rounded-xl bg-blueglow/10 flex items-center justify-center text-blueglow group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-coconut">Email</h3>
+                        <p class="text-xs text-blueglow underline break-all">aliyyazhafirah262@gmail.com</p>
+                    </a>
+
+                    <!-- Phone / WhatsApp Card -->
+                    <a href="https://wa.me/6282288651983" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-darker border border-blueglow/10 hover:border-blueglow/40 transition-all text-center space-y-3 group">
+                        <div class="w-12 h-12 mx-auto rounded-xl bg-blueglow/10 flex items-center justify-center text-blueglow group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-phone text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-coconut">WhatsApp / Phone</h3>
+                        <p class="text-xs text-blueglow">082288651983</p>
+                    </a>
+
+                    <!-- Instagram Card -->
+                    <a href="https://instagram.com/aliyyazhafrh" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-darker border border-blueglow/10 hover:border-blueglow/40 transition-all text-center space-y-3 group">
+                        <div class="w-12 h-12 mx-auto rounded-xl bg-blueglow/10 flex items-center justify-center text-blueglow group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-coconut">Instagram</h3>
+                        <p class="text-xs text-blueglow">@aliyyazhafrh</p>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-6 bg-darker border-t border-blueglow/15 text-center text-xs text-coconut/60">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; <span id="current-year">2026</span> Aliyya Zhafirah. All rights reserved.</p>
+            <div class="flex items-center space-x-6">
+                <a href="#home" class="hover:text-blueglow transition-colors">Home</a>
+                <a href="#projects" class="hover:text-blueglow transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-blueglow transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL TEMPLATE -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-maritime/80 backdrop-blur-md p-4 overflow-y-auto">
+        <div class="bg-darker border border-blueglow/20 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6 relative shadow-2xl">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-coconut/70 hover:text-blueglow text-xl p-2" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Content Loaded Dynamically -->
+            <div id="modal-content" class="space-y-6">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Auto update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Project Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-blueglow', 'text-maritime');
+                    b.classList.add('bg-maritime', 'border', 'border-blueglow/20', 'text-
