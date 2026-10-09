@@ -151,7 +151,7 @@
                     </div>
                 </div>
 
-                <!-- Projects Grid (IoT Monitoring Deleted) -->
+                <!-- Projects Grid -->
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- 1. Automatic Plant Watering System (Coming Soon) -->
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <div class="px-6 pb-6 pt-2">
-                            <button onclick="openModal('watering')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                            <button onclick="openModal('watering')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2 cursor-pointer">
                                 View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </button>
                         </div>
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                         <div class="px-6 pb-6 pt-2">
-                            <button onclick="openModal('omnirobot')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                            <button onclick="openModal('omnirobot')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2 cursor-pointer">
                                 View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </button>
                         </div>
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                         <div class="px-6 pb-6 pt-2">
-                            <button onclick="openModal('doorlock')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                            <button onclick="openModal('doorlock')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2 cursor-pointer">
                                 View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </button>
                         </div>
@@ -245,7 +245,7 @@
                             </div>
                         </div>
                         <div class="px-6 pb-6 pt-2">
-                            <button onclick="openModal('gasmonitoring')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                            <button onclick="openModal('gasmonitoring')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2 cursor-pointer">
                                 View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </button>
                         </div>
@@ -269,7 +269,7 @@
                             </div>
                         </div>
                         <div class="px-6 pb-6 pt-2">
-                            <button onclick="openModal('linefollower')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                            <button onclick="openModal('linefollower')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2 cursor-pointer">
                                 View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </button>
                         </div>
@@ -293,7 +293,7 @@
                             </div>
                         </div>
                         <div class="px-6 pb-6 pt-2">
-                            <button onclick="openModal('aeropendulum')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2">
+                            <button onclick="openModal('aeropendulum')" class="w-full py-2.5 rounded-xl border border-blueglow/30 text-blueglow font-semibold text-xs hover:bg-blueglow hover:text-maritime transition-all flex items-center justify-center gap-2 cursor-pointer">
                                 View Details <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </button>
                         </div>
@@ -368,7 +368,7 @@
     <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-maritime/80 backdrop-blur-md p-4 overflow-y-auto">
         <div class="bg-darker border border-blueglow/20 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6 relative shadow-2xl">
             <!-- Close Button -->
-            <button onclick="closeModal()" class="absolute top-5 right-5 text-coconut/70 hover:text-blueglow text-xl p-2" aria-label="Close Modal">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-coconut/70 hover:text-blueglow text-xl p-2 cursor-pointer" aria-label="Close Modal">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
@@ -407,4 +407,157 @@
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
                     b.classList.remove('bg-blueglow', 'text-maritime');
-                    b.classList.add('bg-maritime', 'border', 'border-blueglow/20', 'text-
+                    b.classList.add('bg-maritime', 'border', 'border-blueglow/20', 'text-coconut/80');
+                });
+                btn.classList.remove('bg-maritime', 'border', 'border-blueglow/20', 'text-coconut/80');
+                btn.classList.add('bg-blueglow', 'text-maritime');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Project Details Database
+        const projectData = {
+            watering: {
+                title: "Automatic Plant Watering System (Coming Soon)",
+                category: "IoT",
+                image: "assets/projects/watering-system.jpg",
+                objective: "Merancang sistem penyiraman tanaman cerdas berbasis mikrokontroler untuk mengoptimalkan kelembaban media tanam secara otomatis.",
+                description: "Sistem sedang dalam tahap perencanaan dan pengembangan untuk membaca tingkat kelembaban tanah melalui sensor khusus, mencatat waktu real-time menggunakan modul RTC, serta mengontrol pompa air mini.",
+                hardware: ["ESP32", "Soil Moisture Sensor", "RTC Module", "Relay Module", "Water Pump", "Power Supply"],
+                tech: ["Arduino IDE", "C++", "IoT Dashboard"],
+                contribution: "Merancang skema rangkaian elektronika, menulis program mikrokontroler ESP32, dan melakukan pengujian sensor kelembaban."
+            },
+            omnirobot: {
+                title: "Autonomous Tri OmniWheel Transporter Robot (2026)",
+                category: "Robotics",
+                image: "assets/projects/omniwheel-robot.jpg",
+                objective: "Mengembangkan robot transpor otonom berbasis Raspberry Pi yang dilengkapi sistem computer vision untuk navigasi, deteksi objek, dan pembacaan barcode.",
+                description: "Robot menggunakan konfigurasi tiga roda omniwheel (Tri OmniWheel) untuk mobilitas omnidirectional yang fleksibel. Raspberry Pi bertindak sebagai otak utama untuk memproses kamera (computer vision) dalam mengenali objek, serta memindai barcode untuk mengeksekusi tugas navigasi secara otomatis.",
+                hardware: ["Raspberry Pi", "Webcam / Camera Module", "Tri OmniWheel Chassis", "DC Motors & Drivers", "Battery Pack"],
+                tech: ["Python", "OpenCV", "Computer Vision", "Linux"],
+                contribution: "Memimpin perancangan sistem computer vision untuk deteksi objek, integrasi perangkat keras dengan Raspberry Pi, serta implementasi pemindaian barcode untuk eksekusi tugas navigasi."
+            },
+            doorlock: {
+                title: "Digital Door Lock",
+                category: "Embedded Systems",
+                image: "assets/projects/digital-door-lock.jpg",
+                objective: "Membuat sistem pengaman pintu berbasis PIN numerik dengan respon aktuator solenoid lock yang aman dan efisien.",
+                description: "Pengguna memasukkan kombinasi PIN melalui keypad matriks 4x4. Mikrokontroler memverifikasi PIN tersebut, menampilkan status pada layar LCD 16x2, dan mengaktifkan relay untuk membuka solenoid lock.",
+                hardware: ["ATmega328P / Arduino", "Keypad 4x4", "LCD 16x2 with I2C", "Relay Module", "Solenoid Door Lock"],
+                tech: ["CodeVisionAVR / Arduino IDE", "C Programming"],
+                contribution: "Membuat diagram alir sistem, merakit rangkaian di breadboard/PCB, dan memprogram logika verifikasi PIN."
+            },
+            gasmonitoring: {
+                title: "MQ-2 Gas Monitoring System",
+                category: "Electronics",
+                image: "assets/projects/gas-monitoring.jpg",
+                objective: "Mendeteksi konsentrasi gas berbahaya di udara bebas untuk pencegahan dini risiko kebocoran gas.",
+                description: "Menggunakan sensor MQ-2 yang dikalibrasi untuk membaca kadar gas tertentu dalam satuan ppm. Dilengkapi indikator visual dan sistem peringatan dini ketika ambang batas terlampaui.",
+                hardware: ["ESP32", "MQ-2 Gas Sensor", "Buzzer", "LED Indicators", "Resistors"],
+                tech: ["C++", "Arduino IDE", "Sensor Calibration"],
+                contribution: "Melakukan kalibrasi pembacaan sensor dan pengujian respon sistem terhadap paparan gas."
+            },
+            linefollower: {
+                title: "Line Follower Robot",
+                category: "Electronics",
+                image: "assets/projects/line-follower.jpg",
+                objective: "Merancang robot seluler beroda yang mampu bernavigasi secara otomatis mengikuti jalur garis pandu.",
+                description: "Robot menggunakan susunan sensor optik inframerah di bagian bawah untuk mendeteksi kontras jalur garis. Sinyal sensor diproses untuk mengatur kecepatan putar motor kanan dan kiri melalui driver motor.",
+                hardware: ["DC Motors", "L298N Motor Driver", "Optical Sensor Array", "Chassis Robot", "Battery Pack"],
+                tech: ["Analog/Digital Circuitry", "Embedded C"],
+                contribution: "Merakit sasis mekanik, menyusun rangkaian sensor optik, dan mengatur logika kendali kemudi motor."
+            },
+            aeropendulum: {
+                title: "Aero Pendulum",
+                category: "Control Systems",
+                image: "assets/projects/aero-pendulum.jpg",
+                objective: "Mengimplementasikan algoritma kendali PID untuk menstabilkan posisi sudut pendulum aerodinamis.",
+                description: "Sistem menggunakan motor penggerak dengan baling-baling untuk memberikan gaya dorong udara pada pendulum. Potensiometer membaca sudut defleksi secara real-time, lalu MATLAB/Simulink bersama Arduino menyetel parameter PID.",
+                hardware: ["Arduino Uno", "Potentiometer Feedback", "DC Motor & Propeller", "Power Driver"],
+                tech: ["MATLAB / Simulink", "PID Controller Tuning", "Arduino IDE"],
+                contribution: "Melakukan pemodelan sistem fisik, identifikasi sistem, dan tuning parameter PID untuk kestabilan posisi sudut."
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function openModal(projectId) {
+            const project = projectData[projectId];
+            if (!project) return;
+
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <span class="px-3 py-1 rounded-md bg-blueglow/10 text-blueglow text-xs font-bold border border-blueglow/25">${project.category}</span>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-coconut">${project.title}</h3>
+                    
+                    <div class="h-64 rounded-xl overflow-hidden border border-blueglow/20">
+                        <img src="${project.image}" alt="${project.title}" onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80'" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-bold text-blueglow uppercase tracking-wider">Tujuan Proyek</h4>
+                        <p class="text-coconut/80 text-sm leading-relaxed">${project.objective}</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-bold text-blueglow uppercase tracking-wider">Deskripsi Sistem</h4>
+                        <p class="text-coconut/80 text-sm leading-relaxed">${project.description}</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="space-y-2 bg-maritime/50 p-4 rounded-xl border border-blueglow/10">
+                            <h4 class="text-xs font-bold text-blueglow uppercase tracking-wider">Perangkat Keras (Hardware)</h4>
+                            <ul class="list-disc list-inside text-xs text-coconut/80 space-y-1">
+                                ${project.hardware.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="space-y-2 bg-maritime/50 p-4 rounded-xl border border-blueglow/10">
+                            <h4 class="text-xs font-bold text-blueglow uppercase tracking-wider">Teknologi & Tools</h4>
+                            <div class="flex flex-wrap gap-1.5 pt-1">
+                                ${project.tech.map(t => `<span class="px-2 py-0.5 rounded bg-blueglow/10 text-blueglow text-[11px]">${t}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 pt-2">
+                        <h4 class="text-sm font-bold text-blueglow uppercase tracking-wider">Kontribusi Pribadi</h4>
+                        <p class="text-coconut/80 text-sm leading-relaxed">${project.contribution}</p>
+                    </div>
+
+                    <div class="pt-4 flex justify-end">
+                        <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-blueglow text-maritime font-semibold text-xs hover:bg-coconut transition-all cursor-pointer">
+                            Tutup Detail
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
